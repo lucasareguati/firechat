@@ -1,0 +1,24 @@
+
+<h1>Chat</h1>
+<hr>
+<div class="app-mensajes" id="app-mensajes">
+
+  <div class="text-right" *ngFor="let mensaje of _cs.chats">
+      <span class="badge badge-primary">Ernesto</span>
+      <p>{{mensaje.mensaje}}</p>
+  </div>
+
+  <!-- <div>
+      <span class="badge badge-success">Hernan</span>
+      <p>Hola Ernesto</p>
+  </div> -->
+
+
+<br>
+</div>
+
+<input type="text" name="mensaje"
+        [(ngModel)]="mensaje"
+        class="form-control"
+        (keyup.enter)= "enviarMensaje()"
+        placeholder="Enviar mensaje">
